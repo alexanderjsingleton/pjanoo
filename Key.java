@@ -38,7 +38,7 @@ public class Key extends Actor
      */
     public void play()
     {
-        Greenfoot.playSound("3a.wav");
+        Greenfoot.playSound(sound);
     }
 }
 
