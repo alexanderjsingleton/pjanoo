@@ -2,11 +2,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
 
 public class Key extends Actor
 {
+     private boolean isDown;
+     private String key;
+     private String sound;
     /**
      * Create a new key.
      */
-    public Key()
+    public Key(String keyName, String soundFile)
     {
+        key = keyName;
+        sound = soundFile;
     }
 
     /**
@@ -28,12 +33,12 @@ public class Key extends Actor
             isDown = false;
         }
     }
-    private boolean isDown;
     /**
      * Play the note of this key.
      */
     public void play()
     {
+        Greenfoot.playSound("3a.wav");
     }
 }
 
