@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sat Dec 05 15:54:17 CST 2015
+#Sat Dec 05 17:19:34 CST 2015
 class.Key.image=white-key.png
 target2.naviview.expanded=true
 target2.name=Key
@@ -20,7 +20,7 @@ target1.height=50
 target1.y=130
 target2.height=50
 target1.x=190
-target1.naviview.expanded=true
+target1.naviview.expanded=false
 dependency1.to=Key
 target1.editor.height=609
 target1.showInterface=false
@@ -28,21 +28,21 @@ target1.name=Piano
 target2.typeParameters=
 mainWindow.width=1026
 target1.typeParameters=
-target1.editor.y=119
-target1.editor.x=214
+target1.editor.y=72
+target1.editor.x=375
 target2.width=80
 class.Key.superclass=greenfoot.Actor
-mainWindow.y=58
+mainWindow.y=222
 target1.width=80
 mainWindow.height=534
-mainWindow.x=431
+mainWindow.x=345
 class.Piano.superclass=greenfoot.World
 target2.type=ClassTarget
 world.lastInstantiated=Piano
 dependency1.type=UsesDependency
-target2.editor.y=62
+target2.editor.y=203
 version=2.7.1
-target2.editor.x=61
+target2.editor.x=518
 package.numDependencies=1
 project.charset=UTF-8
 target2.editor.width=778

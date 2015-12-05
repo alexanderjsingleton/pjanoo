@@ -1,24 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
+import java.awt.Color;
 
 /**
  * A piano that can be played with the computer keyboard.
  * 
- * @author: M. Kölling
- * @version: 0.1
+ * @author Michael Kölling
+ * @version 1.0
  */
 public class Piano extends World
 {
-    /**
-     * Make the piano.
-     */
     private String[] whiteKeys =
-        { "a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "'", "\\" };
-    private String[] whiteNotes =
+        { "A", "S", "D", "F", "G", "H", "J", "K", "L", ";", "'", "\\" };
+    private  String[] whiteNotes =
         { "3c", "3d", "3e", "3f", "3g", "3a", "3b", "4c", "4d", "4e", "4f", "4g" };
-
-    private String[] blackKeys = 
+        
+    private String[] blackKeys =
         { "W", "E", "", "T", "Y", "U", "", "O", "P", "", "]" }; 
-    private String[] blackNotes = 
+    private String[] blackNotes =
         { "3c#", "3d#", "", "3f#", "3g#", "3a#", "", "4c#", "4d#", "", "4f#" }; 
 
     /**
@@ -31,9 +29,9 @@ public class Piano extends World
         makeKeys();
         showText("Click 'Run', then use your keyboard to play", 400, 320);
     }
-
+    
     /**
-     * Create the piano keys and place them in the world.
+     * Create the piano keys (white and black) and place them in the world.
      */
     private void makeKeys() 
     {

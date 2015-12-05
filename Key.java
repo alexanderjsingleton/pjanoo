@@ -1,38 +1,51 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
 
+/**
+ * A key on a piano keyboard. This key has a pair of images to show a normal
+ * and depressed state, and it is associated with a keyboard key and a sound
+ * file, which is played when the key is pressed.
+ * 
+ * @author: M. Kölling
+ * @version: 1.0
+ */
 public class Key extends Actor
 {
-     private boolean isDown;
-     private String key;
-     private String sound;
+    private boolean isDown;
+    private String key;
+    private String sound;
+    private String upImage;
+    private String downImage;
+    
     /**
-     * Create a new key.
+     * Create a new key linked to a given keyboard key, and
+     * with a given sound.
      */
-    public Key(String keyName, String soundFile)
+    public Key(String keyName, String soundFile, String img1, String img2)
     {
-        key = keyName;
         sound = soundFile;
+        key = keyName;
+        upImage = img1;
+        downImage = img2;
+        setImage(upImage);
+        isDown = false;  
     }
 
     /**
      * Do the action for this key.
      */
-    
     public void act()
     {
-        // if (the piano key is down and the keyboard key is down) {
-           // change the image to show the "down" image;
-           // remember that the piano key is down now;
-        // }
-        if ( !isDown && Greenfoot.isKeyDown("g") ) {
-            setImage("white-key-down.png");
+        if (!isDown && Greenfoot.isKeyDown(key)) {
+            play();
+            setImage(downImage);
             isDown = true;
         }
-        if ( isDown && !Greenfoot.isKeyDown("g") ) {
-            setImage("white-key.png");
+        if (isDown && !Greenfoot.isKeyDown(key)) {
+            setImage(upImage);
             isDown = false;
         }
     }
+    
     /**
      * Play the note of this key.
      */
@@ -41,4 +54,3 @@ public class Key extends Actor
         Greenfoot.playSound(sound);
     }
 }
-
