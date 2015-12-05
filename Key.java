@@ -29,5 +29,11 @@ public class Key extends Actor
         }
     }
     private boolean isDown;
+    /**
+     * Play the note of this key.
+     */
+    public void play()
+    {
+    }
 }
 
